@@ -28,3 +28,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/shared/log/puma.stderr.log
+/shared/log/puma.stdout.log
+/*.env
