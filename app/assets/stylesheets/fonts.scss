@@ -1,0 +1,40 @@
+//url(font_path('Roboto-Medium.otf')) format('opentype'),
+@font-face {
+	font-family: 'Roboto';
+	src: url(font_path('Roboto-Regular.eot?')) format('eot'), 
+	     url(font_path('Roboto-Regular.woff')) format('woff'), 
+	     url(font_path('Roboto-Regular.ttf')) format('truetype'),
+	     url(font_path('Roboto-Regular.svg#Roboto')) format('svg');
+}
+
+@font-face {
+	font-family: 'Roboto-Medium';
+	src: url(font_path('Roboto-Medium.eot?')) format('eot'), 
+	     url(font_path('Roboto-Medium.woff')) format('woff'), 
+	     url(font_path('Roboto-Medium.ttf')) format('truetype'),
+	     url(font_path('Roboto-Medium.svg#Roboto-Medium')) format('svg');
+}
+
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url(font_path('Roboto-Bold.eot?')) format('eot'), 
+	     url(font_path('Roboto-Bold.woff')) format('woff'), 
+	     url(font_path('Roboto-Bold.ttf')) format('truetype'),
+	     url(font_path('Roboto-Bold.svg#Roboto-Bold')) format('svg');
+}
+
+@font-face {
+	font-family: 'Roboto-Light';
+	src: url(font_path('Roboto-Light.eot?')) format('eot'), 
+	     url(font_path('Roboto-Light.woff')) format('woff'), 
+	     url(font_path('Roboto-Light.ttf')) format('truetype'),
+	     url(font_path('Roboto-Light.svg#Roboto-Light')) format('svg');
+}
+
+@font-face {
+	font-family: 'Roboto-Thin';
+	src: url(font_path('Roboto-Thin.eot?')) format('eot'),
+	     url(font_path('Roboto-Thin.woff')) format('woff'), 
+	     url(font_path('Roboto-Thin.ttf') ) format('truetype'),
+	     url(font_path('Roboto-Thin.svg#Roboto-Thin')) format('svg');
+}
