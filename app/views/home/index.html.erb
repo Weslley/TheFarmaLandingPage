@@ -21,7 +21,7 @@
                     <h1>A nova forma de pedir medicamentos chegou.</h1>
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-12 hidden-xs">
+                <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="left mr32">
                         <%= link_to  "https://play.google.com/store/apps/details?id=br.com.infog2.thefarma", target: '_blank' do %>
                             <%=image_tag('btn-googleplay.png', class: 'btn-store')%>
@@ -133,8 +133,13 @@
         </div>
 
         <div class="right">
-            <%= image_tag('facebook.svg', size: '32x32', class: 'left mr16') %>
-                <%= image_tag('instagram.svg', size: '32x32', class: 'left') %>
+                <%= link_to  "https://pt-br.facebook.com/thefarmaapp/", target: '_blank', class: 'left mr16' do %>
+                    <%= image_tag('facebook.svg', size: '32x32', class: '') %>
+                <%-end%>
+
+                <%= link_to  "https://www.instagram.com/thefarma/", target: '_blank', class: 'left' do %>
+                    <%= image_tag('instagram.svg', size: '32x32', class: '') %>
+                <%-end%>
         </div>
     </div>
 </footer>

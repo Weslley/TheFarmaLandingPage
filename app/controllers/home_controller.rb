@@ -3,15 +3,20 @@ class HomeController < ApplicationController
   end
 
   def create
-    @mensagem = Mensagem.new(mensagem_params)
-    @mensagem.e_nome = @mensagem.e_cnpj = @mensagem.e_telefone = true
+    begin
+      @mensagem = Mensagem.new(mensagem_params)
+      @mensagem.e_nome = @mensagem.e_cnpj = @mensagem.e_telefone = true
 
-    if @mensagem.valid?
-      EmailerMailer.send_mail(@mensagem).deliver_now
-      flash[:notice] = "Mensagem enviada com sucesso."
-      redirect_to controller: "home", action: "index"
-    else
-      flash[:error] = "Erro ao enviar mensagem."
+      if @mensagem.valid?
+        EmailerMailer.send_mail(@mensagem).deliver_now
+        flash[:notice] = "Mensagem enviada com sucesso."
+        redirect_to controller: "home", action: "index"
+      else
+        flash[:error] = "Erro ao enviar mensagem."
+        render :index
+      end
+    rescue => exception
+      flash[:error] = "Erro ao enviar mensagem. #{exception}"
       render :index
     end
   end
