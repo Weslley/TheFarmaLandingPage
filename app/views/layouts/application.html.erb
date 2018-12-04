@@ -25,7 +25,7 @@
 <body>
     <%= yield.force_encoding(Encoding::UTF_8) %>
 
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', 'data-turbolinks-suppress-warning': true %>
     <%= yield :scripts %>
 </body>
 

@@ -196,6 +196,7 @@
     </div>
 </div>
 
+<% content_for :scripts do %>
 <script type="text/javascript">
     $(function () {
         $('button.show-modal-contact').on('click', function () {
@@ -207,3 +208,4 @@
         });
     });
 </script>
+<% end %>
