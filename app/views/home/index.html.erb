@@ -6,8 +6,8 @@
                 <div class="row">
                     <div id="flash" class="col-xs-12 col-sm-12 col-md-12">
                         <% flash.each do |type, message| -%>
-                            <%= flash_message(message,type).html_safe %>
-                                <%end -%>
+                        <%= flash_message(message,type).html_safe %>
+                        <%end -%>
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="left mr32">
                         <%= link_to  "https://play.google.com/store/apps/details?id=br.com.infog2.thefarma", target: '_blank' do %>
-                            <%=image_tag('btn-googleplay.png', class: 'btn-store')%>
+                        <%=image_tag('btn-googleplay.png', class: 'btn-store')%>
                         <%-end%>
                     </div>
                 </div>
@@ -40,7 +40,8 @@
                 <div class="content-description center">
                     <h1>App criado pensando em você.</h1>
                     <p>
-                        Nos momentos difíceis é impossível fazer pesquisa de preços e o quanto tempo é fundamental, por isso criamos o thefarma.
+                        Nos momentos difíceis é impossível fazer pesquisa de preços e o quanto tempo é fundamental, por
+                        isso criamos o thefarma.
                     </p>
                 </div>
             </div>
@@ -82,7 +83,8 @@
             <div class="col-xs-12 col-sm-12 col-md-6">
                 <h2 class="title">Economia</h2>
                 <p class="description">
-                    Buscamos as melhores ofertas, além de mostrar alternativas de medicamentos com mesmo princípio ativo.
+                    Buscamos as melhores ofertas, além de mostrar alternativas de medicamentos com mesmo princípio
+                    ativo.
                 </p>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6">
@@ -133,14 +135,21 @@
         </div>
 
         <div class="right">
-                <%= link_to  "https://pt-br.facebook.com/thefarmaapp/", target: '_blank', class: 'left mr16' do %>
-                    <%= image_tag('facebook.svg', size: '32x32', class: '') %>
-                <%-end%>
+            <%= link_to  "https://pt-br.facebook.com/thefarmaapp/", target: '_blank', class: 'left mr16' do %>
+            <%= image_tag('facebook.svg', size: '32x32', class: '') %>
+            <%-end%>
 
-                <%= link_to  "https://www.instagram.com/thefarma/", target: '_blank', class: 'left' do %>
-                    <%= image_tag('instagram.svg', size: '32x32', class: '') %>
-                <%-end%>
+            <%= link_to  "https://www.instagram.com/thefarma/", target: '_blank', class: 'left' do %>
+            <%= image_tag('instagram.svg', size: '32x32', class: '') %>
+            <%-end%>
         </div>
+    </div>
+
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li style="margin-left: -15px;"><a href="/politica_de_privacidade">Privacidade</a></li>
+            <!--<li><a href="/terms_of_use">Termos de uso</a></li>-->
+        </ul>
     </div>
 </footer>
 
@@ -155,31 +164,31 @@
                         <h4>Preencha os dados</h4>
                         <%=form_for :mensagem, url:"/home/create",html: {role: "form", class: "form"} do |f| %>
 
-                            <div class="form-group pmd-textfield">
-                                <label class="control-label">Qual o seu nome?</label>
-                                <%= f.text_field :nome, class: "form-control", required: true %>
+                        <div class="form-group pmd-textfield">
+                            <label class="control-label">Qual o seu nome?</label>
+                            <%= f.text_field :nome, class: "form-control", required: true %>
+                        </div>
+
+                        <div class="form-group pmd-textfield">
+                            <label class="control-label">CNPJ da sua farmácia</label>
+                            <%= f.text_field :cnpj, class: "form-control cnpj", required: true %>
+                        </div>
+
+                        <div class="form-group pmd-textfield">
+                            <label class="control-label">Telefone</label>
+                            <%= f.text_field :telefone, class: "form-control celular", required: true %>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <button class="btn btn-transparent-black btn-block hide-modal-contact" type="button">Cancelar</button>
                             </div>
 
-                            <div class="form-group pmd-textfield">
-                                <label class="control-label">CNPJ da sua farmácia</label>
-                                <%= f.text_field :cnpj, class: "form-control cnpj", required: true %>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <button class="btn btn-gradient btn-block" type="submit">Enviar</button>
                             </div>
-
-                            <div class="form-group pmd-textfield">
-                                <label class="control-label">Telefone</label>
-                                <%= f.text_field :telefone, class: "form-control celular", required: true %>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <button class="btn btn-transparent-black btn-block hide-modal-contact" type="button">Cancelar</button>
-                                </div>
-
-                                <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <button class="btn btn-gradient btn-block" type="submit">Enviar</button>
-                                </div>
-                            </div>
-                            <%-end%>
+                        </div>
+                        <%-end%>
                     </div>
                 </div>
             </div>

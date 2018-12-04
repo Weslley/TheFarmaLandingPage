@@ -21,6 +21,9 @@ class HomeController < ApplicationController
     end
   end
 
+  def privacy_policy
+  end
+
   private
 
   def mensagem_params
