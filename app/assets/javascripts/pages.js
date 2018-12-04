@@ -38,41 +38,4 @@ jQuery(document).ready(function ($) {
             $(".sticky-navigation").removeClass("NavBg");
         }
     });
-
-     // screenshots carousel
-     jQuery(function() {
-        jQuery('#allinone_carousel_sweet').allinone_carousel({
-            skin: 'sweet',
-            width: 1140,
-            height: 800,
-            responsive:true,
-            autoPlay: 5,
-            resizeImages:true,
-            autoHideBottomNav:false,
-            //easing:'easeOutBounce',
-            numberOfVisibleItems:5,
-            elementsHorizontalSpacing:180,
-            elementsVerticalSpacing:50,
-            verticalAdjustment:0,
-            animationTime:0.5,
-            circleLeftPositionCorrection:50,
-            circleTopPositionCorrection:20,
-            circleLineWidth:1,
-            circleColor:"#29282B",
-            behindCircleColor:"#999999",
-            nextPrevMarginTop:25,
-            bottomNavMarginBottom:-50
-        });
-    });
-
-    // input , text area placeholder on browsers
-    $('input, textarea').placeholder();
 }); // end Document.ready
-
-/* wow animation put it after Document.ready  */
-wow = new WOW(
-{
-    mobile: false
-});
-
-wow.init();
